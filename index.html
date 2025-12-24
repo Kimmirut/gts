@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Городская телефонная сеть</title>
+    <style>
+        /* Общие стили */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Шапка */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 5px solid #3498db;
+        }
+        
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Основной контент */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            gap: 30px;
+        }
+        
+        /* Блок с описанием системы */
+        .system-description {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .system-description h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .description-block {
+            margin-bottom: 25px;
+        }
+        
+        .description-block h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .description-block ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .description-block li {
+            margin-bottom: 8px;
+        }
+        
+        /* Блок с запросами */
+        .requests {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .requests h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .request-item {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+        }
+        
+        .request-item:hover {
+            background-color: #e8f4fc;
+            transform: translateX(5px);
+        }
+        
+        .request-item .number {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            width: 28px;
+            height: 28px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        /* Блок с типами АТС */
+        .ats-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .ats-type {
+            flex: 1;
+            min-width: 250px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .ats-type h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .type-city {
+            border-top: 4px solid #3498db;
+        }
+        
+        .type-department {
+            border-top: 4px solid #2ecc71;
+        }
+        
+        .type-institution {
+            border-top: 4px solid #e74c3c;
+        }
+        
+        /* Подвал */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <h1>Городская телефонная сеть</h1>
+            <p>Информационная система для управления и анализа данных о телефонных станциях, абонентах и услугах связи</p>
+        </div>
+    </header>
+    
+    <!-- Основной контент -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Блок с описанием системы -->
+            <section class="system-description">
+                <h2>Описание системы</h2>
+                
+                <div class="description-block">
+                    <h3>Структура сети</h3>
+                    <p>Городская телефонная сеть представляет собой совокупность Автономных Телефонных Станций (АТС) одного из трех типов:</p>
+                    <ul>
+                        <li>Городские АТС</li>
+                        <li>Ведомственные АТС</li>
+                        <li>Учрежденческие АТС</li>
+                    </ul>
+                    <p>Каждая АТС имеет свой список подключенных абонентов и характерные атрибуты.</p>
+                </div>
+                
+                <div class="description-block">
+                    <h3>Абоненты и телефоны</h3>
+                    <p>Абонент может иметь один или несколько телефонных номеров. Существуют параллельные и спаренные телефоны, когда у нескольких абонентов один номер.</p>
+                    <p>Каждому номеру соответствует адрес (индекс, район, улица, дом, квартира).</p>
+                </div>
+                
+                <div class="description-block">
+                    <h3>Услуги и оплата</h3>
+                    <p>Все телефоны городской АТС имеют выход на межгород, но для конкретного абонента он может быть открыт или закрыт.</p>
+                    <p>Абоненты обязаны платить абонентскую плату до 20-го числа каждого месяца. При неуплате производится отключение услуг.</p>
+                    <p>Существуют льготные категории абонентов (пенсионеры, инвалиды), которые платят 50% от абонентской платы.</p>
+                </div>
+            </section>
+            
+            <!-- Блок с запросами -->
+            <section class="requests">
+                <h2>Виды запросов в системе</h2>
+                
+                <div class="request-item">
+                    <span class="number">1</span>
+                    <span>Получить перечень и общее число абонентов указанной АТС</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">2</span>
+                    <span>Получить перечень и общее число свободных телефонных номеров</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">3</span>
+                    <span>Получить перечень и общее число должников</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">4</span>
+                    <span>Определить АТС с самым большим числом должников</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">5</span>
+                    <span>Получить перечень общественных телефонов и таксофонов</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">6</span>
+                    <span>Найти процентное соотношение обычных и льготных абонентов</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">7</span>
+                    <span>Получить перечень абонентов с параллельными телефонами</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">8</span>
+                    <span>Определить, есть ли по данному адресу телефон</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">9</span>
+                    <span>Определить город с наибольшим количеством междугородных переговоров</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">10</span>
+                    <span>Получить полную информацию об абонентах с заданным номером</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">11</span>
+                    <span>Получить перечень спаренных телефонов для замены на обычные</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">12</span>
+                    <span>Получить перечень внутренних номеров с малым числом внешних звонков</span>
+                </div>
+                
+                <div class="request-item">
+                    <span class="number">13</span>
+                    <span>Получить перечень должников для отправки уведомлений</span>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Блок с типами АТС -->
+        <div class="ats-types">
+            <div class="ats-type type-city">
+                <h3>Городские АТС</h3>
+                <p>Обеспечивают телефонной связью население города. Имеют выход на межгород.</p>
+            </div>
+            
+            <div class="ats-type type-department">
+                <h3>Ведомственные АТС</h3>
+                <p>Обслуживают организации и предприятия. Могут иметь ограниченный доступ к внешним линиям.</p>
+            </div>
+            
+            <div class="ats-type type-institution">
+                <h3>Учрежденческие АТС</h3>
+                <p>Обслуживают учебные заведения, больницы и другие учреждения. Часто имеют внутреннюю нумерацию.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="container">
+            <p>Информационная система городской телефонной сети &copy; 2023</p>
+            <p>Для получения доступа к системе обратитесь к администратору</p>
+        </div>
+    </footer>
+</body>
+</html>
